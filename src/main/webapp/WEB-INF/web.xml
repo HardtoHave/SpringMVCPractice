@@ -11,7 +11,8 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:springmvc.xml </param-value>
         </init-param>
-        <load-on-startup></load-on-startup>
+        <!--put dispatcher servlet initialization time forward to server on-->
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <!--
         url-pattern

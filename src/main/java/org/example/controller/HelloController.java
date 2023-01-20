@@ -9,8 +9,8 @@ public class HelloController {
     public String portal(){
         return "index";
     }
-    @RequestMapping("/hello")
-    public String hello(){
-        return "success";
-    }
+//    @RequestMapping("/hello")
+//    public String hello(){
+//        return "success";
+//    }
 }
