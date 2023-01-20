@@ -6,18 +6,18 @@
     <!--scan controller layer component-->
     <context:component-scan base-package="org.example.controller"/>
     <!--config thymeleaf view analyzer-->
-    <bean id="viewResolver" class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+    <bean id="viewResolver" class="org.thymeleaf.spring6.view.ThymeleafViewResolver">
         <property name="order" value="1"/>
         <property name="characterEncoding" value="UTF-8"/>
         <property name="templateEngine">
-            <bean class="org.thymeleaf.spring5.SpringTemplateEngine">
+            <bean class="org.thymeleaf.spring6.SpringTemplateEngine">
                 <property name="templateResolver">
-                    <bean class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
+                    <bean class="org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver">
                         <!--view prefix-->
                         <property name="prefix" value="/WEB-INF/templates/"/>
                         <!--view suffix-->
                         <property name="suffix" value=".html"/>
-                        <property name="templateMode" value="HTML5"/>
+                        <property name="templateMode" value="HTML"/>
                         <property name="characterEncoding" value="UTF-8"/>
                     </bean>
                 </property>
