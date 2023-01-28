@@ -2,6 +2,7 @@ package org.example.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import org.example.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -37,6 +38,11 @@ public class TestParamController {
             @CookieValue("JSESSIONID") String jSessionId
     ){
         System.out.println("username:"+username+",password:"+password+", referer:"+referer+",jSessionId:"+jSessionId);
+        return "success";
+    }
+    @RequestMapping("/param/pojo")
+    public String getParamByPojo(User user){
+        System.out.println(user);
         return "success";
     }
 }

@@ -16,10 +16,12 @@
 <a th:href="@{/aaa/abc/ant}">hello(ant test)</a><br>
 <a th:href="@{/test/rest/1}">hello(value placeholder)</a><br>
 <hr>
-<form th:action="@{/param}" method="get">
+<form th:action="@{/param/pojo}" method="get">
     username:<input type="text" name="username"><br>
     password:<input type="password" name="password"><br>
     <input type="submit" value="login"><br>
 </form>
+<hr>
+<a th:href="@{/test/mav}">share data to request scope through ModelAndView </a>
 </body>
 </html>
