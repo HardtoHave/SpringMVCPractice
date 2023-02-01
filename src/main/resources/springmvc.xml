@@ -5,7 +5,7 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!--scan controller layer component-->
-    <context:component-scan base-package="org.example.controller"/>
+    <context:component-scan base-package="org.example"/>
     <!--config thymeleaf view analyzer-->
     <bean id="viewResolver" class="org.thymeleaf.spring6.view.ThymeleafViewResolver">
         <property name="order" value="1"/>

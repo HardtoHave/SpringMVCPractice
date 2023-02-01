@@ -31,5 +31,18 @@
 <hr>
 <a th:href="@{/user}">query all user information</a><br>
 <a th:href="@{/user/1}">query the user information where id equals 1</a><br>
+<form th:action="@{/user}" method="post">
+    <input type="submit" value="add user info">
+</form>
+<form th:action="@{/user}" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="submit" value="modify user info">
+</form>
+<form th:action="@{/user/1}" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete user info">
+</form>
+<hr>
+<a th:href="@{/employee}">query all employee information</a>
 </body>
 </html>
