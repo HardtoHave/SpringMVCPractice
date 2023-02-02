@@ -25,8 +25,11 @@
             </bean>
         </property>
     </bean>
+    <!--config default servlet to deal with static resource-->
+    <mvc:default-servlet-handler/>
     <!--turn on mvc annotation driver-->
     <mvc:annotation-driven/>
     <!--view controller-->
     <mvc:view-controller path="/" view-name="index"/>
+    <mvc:view-controller path="/to/add" view-name="employee_add"/>
 </beans>
