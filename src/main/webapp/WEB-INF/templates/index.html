@@ -23,7 +23,7 @@
 </form>
 <hr>
 <a th:href="@{/test/mav}">share data to request scope through ModelAndView </a><br>
-<a th:href="@{/test/session}">share data to session scope  </a><br>
+<a th:href="@{/test/session}">share data to session scope </a><br>
 <a th:href="@{/test/application}">share data to application scope </a><br>
 <a th:href="@{/test/view/thymeleaf}">test thymeleaf view in SpringMVC</a><br>
 <a th:href="@{/test/view/forward}">test InternalResourceView in SpringMVC</a><br>
@@ -44,5 +44,36 @@
 </form>
 <hr>
 <a th:href="@{/employee}">query all employee information</a>
+<hr>
+<div id="app">
+    <input type="button" value="testSpringMVCForAJAX" @click="testAjax()">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+    /**
+     * axios({
+     *    url:"",
+     *    method:"",
+     *    params:{},
+     *    data:{}
+     *}).then(response=>{
+     *    console.log(response.data);
+     *});
+     */
+    let vue = new Vue({
+        el: "#app",
+        methods: {
+            testAjax() {
+                axios.post(
+                    "/SpringMVC/test/ajax?id=1001",
+                    {username:"admin",password:"admin"}
+                ).then(response=>{
+                    console.log(response.data);
+                });
+            }
+        }
+    })
+</script>
 </body>
 </html>
